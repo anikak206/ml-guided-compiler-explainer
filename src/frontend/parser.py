@@ -13,8 +13,8 @@ We keep a `pos` cursor into the token list and two helper primitives:
 Everything else is built from those three.
 """
 
-from lexer import tokenize
-from ast_nodes import Num, Ident, BinOp, VarDecl, Assign, If, For, Return, Program
+from frontend.lexer import tokenize
+from frontend.ast_nodes import Num, Ident, BinOp, VarDecl, Assign, If, For, Return, Program
 
 
 class ParseError(Exception):

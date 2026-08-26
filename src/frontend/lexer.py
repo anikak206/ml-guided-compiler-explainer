@@ -69,7 +69,7 @@ def tokenize(source: str) -> list[Token]:
 
 if __name__ == "__main__": # run the following code only when the Python file is executed directly
     # Quick manual test: tokenize our test file and print every token
-    with open("../test/sample_inputs/sample_input_1.c") as f: # "with" closes the file after the execution of the block
+    with open("test/sample_inputs/sample_input_1.c") as f: # "with" closes the file after the execution of the block
         src = f.read()
 
     for tok in tokenize(src):
