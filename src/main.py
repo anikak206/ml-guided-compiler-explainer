@@ -1,4 +1,4 @@
-"""
+﻿"""
 main.py - single-command pipeline entry point
 --------------------------------------------------
 Phases 1-4: fully real (source -> IR -> ML stub JSON -> explanations)
@@ -42,7 +42,7 @@ def run_pipeline(source_path: str):
 
     # Phase 6: Compare & Report
     report = build_report(source_path)
-    report_path = "../report.txt"
+    report_path = "report.txt"
     with open(report_path, "w") as f:
         f.write(report)
     print(f"[Phase 6] Report written to {report_path}")
