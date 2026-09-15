@@ -1,0 +1,4 @@
+﻿# No external dependencies yet - pure Python stdlib.
+# Add entries here once real ML/LLM integration is implemented, e.g.:
+# anthropic
+# scikit-learn
