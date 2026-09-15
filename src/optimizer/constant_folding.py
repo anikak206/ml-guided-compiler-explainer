@@ -1,4 +1,4 @@
-"""
+﻿"""
 Phase 5: Apply Optimization (constant folding, for real)
 --------------------------------------------------------------
 Takes the IR and actually rewrites it:
@@ -50,7 +50,7 @@ def constant_fold(instrs: list) -> list:
 
 
 if __name__ == "__main__":
-    with open("../test_input.c") as f:
+    with open("../test/sample_inputs/sample_input_1.c") as f:
         src = f.read()
 
     original = generate_ir(src)

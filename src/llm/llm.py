@@ -1,4 +1,4 @@
-"""
+﻿"""
 Phase 4: LLM Explanation Layer
 ----------------------------------
 Takes the ML stub's JSON (applied + rejected optimizations) plus a
@@ -95,7 +95,7 @@ def generate_explanations(prediction: dict, source_map: dict) -> dict:
 
 
 if __name__ == "__main__":
-    with open("../test_input.c") as f:
+    with open("../test/sample_inputs/sample_input_1.c") as f:
         src = f.read()
 
     instrs = generate_ir(src)

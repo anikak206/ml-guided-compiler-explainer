@@ -1,4 +1,4 @@
-"""
+﻿"""
 Phase 3: ML Prediction (stub)
 --------------------------------
 Not a real model - a rule-based scanner over the IR that outputs the
@@ -124,7 +124,7 @@ def predict(instrs: list[Instr]) -> dict:
 
 
 if __name__ == "__main__":
-    with open("../test_input.c") as f:
+    with open("../test/sample_inputs/sample_input_1.c") as f:
         src = f.read()
 
     instrs = generate_ir(src)
