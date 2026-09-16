@@ -51,4 +51,4 @@ def run_pipeline(source_path: str):
 
 
 if __name__ == "__main__":
-    run_pipeline("test/sample_inputs/sample_input_1.c")
+    run_pipeline("../test/sample_inputs/sample_input_1.c")
