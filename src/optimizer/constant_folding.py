@@ -13,6 +13,7 @@ instrs list is genuinely shorter/simpler than the input for any
 foldable expression.
 """
 
+import operator
 from frontend.ir import generate_ir, Instr
 from ml.predictor import find_foldable_instrs
 
@@ -27,7 +28,7 @@ def constant_fold(instrs: list) -> list:
     folded_dests = set()
     symbol = {"add": "+", "sub": "-", "mul": "*", "div": "/"}
     for instr in foldable:
-        value = eval(f"{instr.arg1} {symbol[instr.op]} {instr.arg2}")
+        value = {"add": operator.add, "sub": operator.sub, "mul": operator.mul, "div": operator.truediv}[instr.op](instr.arg1, instr.arg2)
         substitutions[instr.dest] = value
         folded_dests.add(instr.dest)
 

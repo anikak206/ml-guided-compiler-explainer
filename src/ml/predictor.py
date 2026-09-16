@@ -16,6 +16,7 @@ Two rules:
 """
 
 import json
+import operator
 from frontend.ir import generate_ir, Instr
 
 
@@ -99,7 +100,7 @@ def predict(instrs: list[Instr]) -> dict:
     if foldable:
         instr = foldable[0]  # thin slice: just take the first candidate
         symbol = {"add": "+", "sub": "-", "mul": "*", "div": "/"}[instr.op]
-        folded_value = eval(f"{instr.arg1} {symbol} {instr.arg2}")
+        folded_value = {"add": operator.add, "sub": operator.sub, "mul": operator.mul, "div": operator.truediv}[instr.op](instr.arg1, instr.arg2)
         applied.append({
             "optimization": "constant_folding",
             "line": instr.line,
